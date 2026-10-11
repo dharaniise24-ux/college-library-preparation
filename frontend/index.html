@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Library Preparation</title>
+
+    <!-- Load CSS only once -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Load JavaScript after HTML is parsed -->
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon">📚</div>
+            <div>
+                <h1>College Library</h1>
+                <span>Preparation</span>
+            </div>
+        </div>
+
+        <button
+            class="theme-btn"
+            id="themeButton"
+            type="button"
+            aria-label="Toggle dark mode"
+            onclick="toggleTheme()"
+        >🌙</button>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+
+                <div class="badge">
+                    ✨ AI-Powered Library Assistant
+                </div>
+
+                <h2>
+                    Learn smarter.<br>
+                    <span>Prepare better.</span>
+                </h2>
+
+                <p>
+                    Explore your college library, understand engineering
+                    subjects, and prepare for examinations with your
+                    intelligent study assistant.
+                </p>
+
+                <!-- SEARCH -->
+                <form class="search-box" id="searchForm">
+                    <span aria-hidden="true">🔍</span>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search books, authors, subjects or topics..."
+                        autocomplete="off"
+                        aria-label="Search library"
+                    >
+
+                    <button id="searchButton" type="submit">
+                        Search
+                    </button>
+                </form>
+
+                <div class="example-text">
+                    Try: DBMS, Operating Systems, an author name, or a topic
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RESULTS -->
+        <section
+            id="results"
+            class="section"
+            aria-live="polite"
+            aria-busy="false"
+        ></section>
+
+        <!-- EXPLORE ACTIONS -->
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <span class="small-title">EXPLORE</span>
+                    <h3>What do you want to do?</h3>
+                    <p class="action-hint">
+                        Enter a subject or topic in the search box above, then
+                        choose a study action.
+                    </p>
+                </div>
+            </div>
+
+            <div class="action-grid">
+
+                <button
+                    class="action-card"
+                    type="button"
+                    onclick="showMessage('search books')"
+                >
+                    <span class="action-icon blue">🔍</span>
+                    <h4>Search Books</h4>
+                    <p>Find books by title, author or subject.</p>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button
+                    class="action-card"
+                    type="button"
+                    onclick="showMessage('prepare')"
+                >
+                    <span class="action-icon purple">🎓</span>
+                    <h4>Prepare by Subject</h4>
+                    <p>Explore books and plan your subject preparation.</p>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button
+                    class="action-card"
+                    type="button"
+                    onclick="showMessage('chapters')"
+                >
+                    <span class="action-icon orange">📖</span>
+                    <h4>Explore Chapters</h4>
+                    <p>Search available book content and chapter topics.</p>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button
+                    class="action-card"
+                    type="button"
+                    onclick="showMessage('important')"
+                >
+                    <span class="action-icon pink">🎯</span>
+                    <h4>Important Topics</h4>
+                    <p>Find relevant topics in the available library content.</p>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button
+                    class="action-card"
+                    type="button"
+                    onclick="showMessage('questions')"
+                >
+                    <span class="action-icon green">❓</span>
+                    <h4>Practice Questions</h4>
+                    <p>Generate revision questions from available topics.</p>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button
+                    class="action-card"
+                    type="button"
+                    onclick="showMessage('revision')"
+                >
+                    <span class="action-icon yellow">⚡</span>
+                    <h4>Quick Revision</h4>
+                    <p>Find library material for a quick revision session.</p>
+                    <span class="arrow">→</span>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- LIBRARY ASSISTANT -->
+        <section class="chat-section">
+
+            <div class="chat-intro">
+                <div class="ai-circle">🤖</div>
+
+                <div>
+                    <span class="small-title">LIBRARY ASSISTANT</span>
+                    <h3>Ask about your library</h3>
+                    <p>
+                        Search books, discover topics and prepare for exams.
+                    </p>
+                </div>
+            </div>
+
+            <div class="chat-card">
+
+                <div class="chat-message">
+                    <div class="avatar">🤖</div>
+
+                    <div class="message">
+                        <strong>Library Assistant</strong>
+                        <p>
+                            Hi! 👋 Ask for books, important topics, practice
+                            questions, a study guide, or quick revision notes.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="assistant-form" id="assistantForm">
+                    <label class="sr-only" for="assistantInput">
+                        Ask the library assistant
+                    </label>
+                    <input
+                        id="assistantInput"
+                        type="text"
+                        placeholder="Try: practice questions for DBMS"
+                        autocomplete="off"
+                    >
+                    <button type="submit">Ask assistant</button>
+                </form>
+
+                <div class="suggestions">
+                    <button
+                        type="button"
+                        onclick="askQuestion('DBMS')"
+                    >📚 Show DBMS books</button>
+
+                    <button
+                        type="button"
+                        onclick="askQuestion('normalization')"
+                    >🧠 Find normalization</button>
+
+                    <button
+                        type="button"
+                        onclick="askQuestion('Operating Systems')"
+                    >💻 Show OS books</button>
+
+                    <button
+                        type="button"
+                        onclick="showMessage('questions')"
+                    >❓ Practice questions</button>
+
+                    <button
+                        type="button"
+                        onclick="showMessage('revision')"
+                    >⚡ Quick revision</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>📚 College Library Preparation</p>
+        <span>Your engineering study companion</span>
+    </footer>
+
+</body>
+</html>

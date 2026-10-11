@@ -1,0 +1,94 @@
+[
+  {
+    "subject": "Database Management Systems",
+    "book_name": "Database System Concepts",
+    "author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan",
+    "edition": "7th Edition",
+    "publication_year": 2020,
+    "content": [
+      "Introduction to Database Systems",
+      "Database Architecture",
+      "Entity Relationship Model",
+      "Relational Model",
+      "SQL",
+      "Relational Database Design",
+      "Normalization",
+      "Transaction Management",
+      "Concurrency Control",
+      "Database Recovery"
+    ]
+  },
+  {
+    "subject": "Operating Systems",
+    "book_name": "Operating System Concepts",
+    "author": "Abraham Silberschatz, Peter Baer Galvin, Greg Gagne",
+    "edition": "10th Edition",
+    "publication_year": 2018,
+    "content": [
+      "Introduction to Operating Systems",
+      "Process Management",
+      "Threads",
+      "CPU Scheduling",
+      "Synchronization",
+      "Deadlocks",
+      "Memory Management",
+      "Virtual Memory",
+      "File Systems",
+      "Security"
+    ]
+  },
+  {
+    "subject": "Data Structures and Algorithms",
+    "book_name": "Data Structures and Algorithm Analysis",
+    "author": "Mark Allen Weiss",
+    "edition": "3rd Edition",
+    "publication_year": 2012,
+    "content": [
+      "Algorithm Analysis",
+      "Lists",
+      "Stacks",
+      "Queues",
+      "Trees",
+      "Hashing",
+      "Heaps",
+      "Sorting",
+      "Graphs",
+      "Graph Algorithms"
+    ]
+  },
+  {
+    "subject": "Computer Networks",
+    "book_name": "Computer Networking: A Top-Down Approach",
+    "author": "James Kurose, Keith Ross",
+    "edition": "8th Edition",
+    "publication_year": 2021,
+    "content": [
+      "Computer Networks and the Internet",
+      "Application Layer",
+      "Transport Layer",
+      "Network Layer",
+      "Data Link Layer",
+      "Wireless Networks",
+      "Security",
+      "Multimedia Networking"
+    ]
+  },
+  {
+    "subject": "Object-Oriented Programming",
+    "book_name": "Object-Oriented Programming with Java",
+    "author": "Various",
+    "edition": "Reference Edition",
+    "publication_year": 2020,
+    "content": [
+      "Object Oriented Concepts",
+      "Classes and Objects",
+      "Inheritance",
+      "Polymorphism",
+      "Abstraction",
+      "Encapsulation",
+      "Exception Handling",
+      "Collections",
+      "File Handling"
+    ]
+  }
+]
